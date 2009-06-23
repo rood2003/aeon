@@ -477,7 +477,8 @@
 				<description>Backdrops Unfocused</description>
 				<posy>32</posy>
 				<label>31121</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(6) | Control.HasFocus(300) | Control.HasFocus(92)]</visible>
 			</control>
@@ -485,7 +486,8 @@
 				<description>Backdrops Focused</description>
 				<posy>32</posy>
 				<label>31121</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(6) | Control.HasFocus(300) | Control.HasFocus(92)</visible>
 			</control>
@@ -515,7 +517,8 @@
 				<description>Furniture Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31123</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(7) | Control.HasFocus(301)]</visible>
 			</control>
@@ -523,7 +526,8 @@
 				<description>Furniture Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31123</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(7) | Control.HasFocus(301)</visible>
 			</control>
@@ -554,7 +558,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31125</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(8) + !Control.HasFocus(30) + !Control.HasFocus(31) + !Control.HasFocus(32)</visible>
 			</control>
@@ -562,7 +567,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31125</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(8) | Control.HasFocus(30) | Control.HasFocus(31) | Control.HasFocus(32)</visible>
 			</control>
@@ -592,7 +598,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31127</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(9) + !Control.HasFocus(40)</visible>
 			</control>
@@ -600,7 +607,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31127</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(9) | Control.HasFocus(40)</visible>
 			</control>
@@ -630,7 +638,8 @@
 				<description>OSD Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31129</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(10)</visible>
 			</control>
@@ -638,7 +647,8 @@
 				<description>OSD Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31129</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(10)</visible>
 			</control>			
@@ -665,7 +675,8 @@
 				<description>Advanced Sub Unfocused</description>
 				<posy>322</posy>
 				<label>31159</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(11)</visible>
 			</control>
@@ -673,7 +684,8 @@
 				<description>Advanced Sub Unfocused</description>
 				<posy>322</posy>
 				<label>31159</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(11)</visible>
 			</control>			
@@ -712,7 +724,8 @@
 				<description>Login Options Unfocused</description>
 				<posy>32</posy>
 				<label>31164</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(6) | Control.HasFocus(4)]</visible>
 			</control>
@@ -720,7 +733,8 @@
 				<description>Login Options Focused</description>
 				<posy>32</posy>
 				<label>31164</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(6) | Control.HasFocus(4)</visible>
 			</control>
@@ -748,7 +762,8 @@
 				<description>Users Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31166</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(7) | Control.HasFocus(2)]</visible>
 			</control>
@@ -756,7 +771,8 @@
 				<description>Users Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31166</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(7) | Control.HasFocus(2)</visible>
 			</control>
@@ -795,7 +811,8 @@
 				<description>Backdrops Unfocused</description>
 				<posy>32</posy>
 				<label>31233</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(6) | ControlGroup(20).HasFocus]</visible>
 			</control>
@@ -803,7 +820,8 @@
 				<description>Backdrops Focused</description>
 				<posy>32</posy>
 				<label>31233</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
 			</control>
@@ -831,7 +849,8 @@
 				<description>Furniture Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31235</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(7) | ControlGroup(11).HasFocus]</visible>
 			</control>
@@ -839,7 +858,8 @@
 				<description>Furniture Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31235</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(7) | ControlGroup(11).HasFocus</visible>
 			</control>
@@ -868,7 +888,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31237</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(8) | ControlGroup(12).HasFocus]</visible>
 			</control>
@@ -876,7 +897,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31237</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(8) | ControlGroup(12).HasFocus</visible>
 			</control>
@@ -906,7 +928,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31241</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(9) | ControlGroup(13).HasFocus]</visible>
 			</control>
@@ -914,7 +937,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31241</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(9) | ControlGroup(13).HasFocus</visible>
 			</control>
@@ -944,7 +968,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31245</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(10) | ControlGroup(14).HasFocus]</visible>
 			</control>
@@ -952,7 +977,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31245</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(10) | ControlGroup(14).HasFocus</visible>
 			</control>
@@ -978,7 +1004,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31141</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(6)</visible>
 			</control>
@@ -986,7 +1013,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31141</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(6)</visible>
 			</control>
@@ -1003,7 +1031,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31143</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(7)</visible>
 			</control>
@@ -1011,7 +1040,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31143</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(7)</visible>
 			</control>
@@ -1028,7 +1058,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31145</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(8)</visible>
 			</control>
@@ -1036,7 +1067,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31145</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(8)</visible>
 			</control>
@@ -1053,7 +1085,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31147</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(9)</visible>
 			</control>
@@ -1061,7 +1094,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31147</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(9)</visible>
 			</control>
@@ -1078,7 +1112,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31149</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(10)</visible>
 			</control>
@@ -1086,7 +1121,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31149</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(10)</visible>
 			</control>
@@ -1103,7 +1139,8 @@
 				<description>My Network Sub Unfocused</description>
 				<posy>322</posy>
 				<label>31151</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(2)</visible>
 			</control>
@@ -1111,7 +1148,8 @@
 				<description>My Network Sub Unfocused</description>
 				<posy>322</posy>
 				<label>31151</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(2)</visible>
 			</control>
@@ -1128,7 +1166,8 @@
 				<description>System Sub Unfocused</description>
 				<posy>380</posy>
 				<label>31153</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(4)</visible>
 			</control>
@@ -1136,7 +1175,8 @@
 				<description>System Sub Unfocused</description>
 				<posy>380</posy>
 				<label>31153</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(4)</visible>
 			</control>
@@ -1153,7 +1193,8 @@
 				<description>Appearance Sub Unfocused</description>
 				<posy>438</posy>
 				<label>31155</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(3)</visible>
 			</control>
@@ -1161,7 +1202,8 @@
 				<description>Appearance Sub Unfocused</description>
 				<posy>438</posy>
 				<label>31155</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(3)</visible>
 			</control>
@@ -1178,7 +1220,8 @@
 				<description>Backdrops Sub Unfocused</description>
 				<posy>496</posy>
 				<label>31157</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(11)</visible>
 			</control>
@@ -1186,7 +1229,8 @@
 				<description>Backdrops Sub Unfocused</description>
 				<posy>496</posy>
 				<label>31157</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(11)</visible>
 			</control>
@@ -1203,7 +1247,8 @@
 				<description>Backdrops Sub Unfocused</description>
 				<posy>554</posy>
 				<label>31161</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(12)</visible>
 			</control>
@@ -1211,7 +1256,8 @@
 				<description>Backdrops Sub Unfocused</description>
 				<posy>554</posy>
 				<label>31161</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(12)</visible>
 			</control>			
@@ -1290,7 +1336,8 @@
 				<description>General Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31320</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1298,7 +1345,8 @@
 				<description>General Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31320</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1306,7 +1354,8 @@
 				<description>Library Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31321</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1314,7 +1363,8 @@
 				<description>Library Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31321</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1322,7 +1372,8 @@
 				<description>Player Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31322</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1330,7 +1381,8 @@
 				<description>Player Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31322</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1338,7 +1390,8 @@
 				<description>Subtitles Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31323</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1346,7 +1399,8 @@
 				<description>Subtitles Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31323</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1354,7 +1408,8 @@
 				<description>Scraper Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31351</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1362,7 +1417,8 @@
 				<description>Scraper Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31351</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(34)</visible>
 			</control>			
@@ -1376,7 +1432,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31324</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1384,7 +1441,7 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31324</label>
-				<textcolor>FF262728</textcolor>
+				<textcolor>FFc</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1392,7 +1449,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31325</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1400,7 +1458,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31325</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1414,7 +1473,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31326</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1422,7 +1482,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31326</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1430,7 +1491,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31327</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1438,7 +1500,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31327</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1446,7 +1509,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31328</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1454,7 +1518,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31328</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1462,7 +1527,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31329</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1470,7 +1536,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31329</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1478,7 +1545,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31330</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1486,7 +1554,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31330</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1500,7 +1569,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31331</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1508,7 +1578,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31331</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1516,7 +1587,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31332</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1524,7 +1596,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31332</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1532,7 +1605,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31333</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1540,7 +1614,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31333</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1548,7 +1623,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31334</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1556,7 +1632,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31334</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1564,7 +1641,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31335</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1572,7 +1650,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31335</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1586,7 +1665,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31336</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1594,7 +1674,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31336</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1602,7 +1683,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31337</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1610,7 +1692,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31337</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1618,7 +1701,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31338</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1626,7 +1710,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31338</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1634,7 +1719,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31339</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1642,7 +1728,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31339</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1650,7 +1737,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31341</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1658,7 +1746,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31341</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1672,7 +1761,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31342</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1680,7 +1770,8 @@
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
 				<label>31342</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(30)</visible>
 			</control>
@@ -1688,7 +1779,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31343</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1696,7 +1788,8 @@
 				<description>My Music Sub Unfocused</description>
 				<posy>90</posy>
 				<label>31343</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(31)</visible>
 			</control>
@@ -1704,7 +1797,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31344</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1712,7 +1806,8 @@
 				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31344</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(32)</visible>
 			</control>
@@ -1720,7 +1815,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31345</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1728,7 +1824,8 @@
 				<description>My Pictures Sub Unfocused</description>
 				<posy>206</posy>
 				<label>31345</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(33)</visible>
 			</control>
@@ -1736,7 +1833,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31346</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1744,7 +1842,8 @@
 				<description>My Weather Sub Unfocused</description>
 				<posy>264</posy>
 				<label>31346</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(34)</visible>
 			</control>
@@ -1752,7 +1851,8 @@
 				<description>My Network Sub Unfocused</description>
 				<posy>322</posy>
 				<label>31347</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(35)</visible>
 			</control>
@@ -1760,7 +1860,8 @@
 				<description>My Network Sub Unfocused</description>
 				<posy>322</posy>
 				<label>31347</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(35)</visible>
 			</control>
@@ -1768,7 +1869,8 @@
 				<description>System Sub Unfocused</description>
 				<posy>380</posy>
 				<label>31348</label>
-				<textcolor>FFf5f5f5</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsNFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!ControlGroup(3).HasFocus(36)</visible>
 			</control>
@@ -1776,7 +1878,8 @@
 				<description>System Sub Unfocused</description>
 				<posy>380</posy>
 				<label>31348</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>ControlGroup(3).HasFocus(36)</visible>
 			</control>
@@ -1790,7 +1893,8 @@
 				<description>My Weather Sub</description>
 				<posy>32</posy>
 				<label>31349</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(6)</visible>
 			</control>
@@ -1804,7 +1908,8 @@
 				<description>My Weather Sub</description>
 				<posy>32</posy>
 				<label>31350</label>
-				<textcolor>FF262728</textcolor>
+				<include condition="!Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">SettingsSubHeadingsColorsFNight</include>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(6)</visible>
 			</control>

@@ -1,5 +1,9 @@
 <includes>
 
+<!-- New Include For Night Mods -->
+
+<include file="Includes_NightMods.xml" />
+	
 <include file="Defaults.xml" />
 <include file="Includes_Animations.xml" />
 <include file="Includes_Backgrounds.xml" />

@@ -28,12 +28,13 @@
 			<posy>10</posy>
 			<width>688</width>
 			<height>163</height>
-			<texture>dialogs/progress_backg.png</texture>		
+			<include condition="!Skin.HasSetting(darkshowcase)">MuteBackLight</include>		
+			<include condition="Skin.HasSetting(darkshowcase)">MuteBackNight</include>	
 		</control>
 	
 		<control type="label">
 			<posx>10</posx>
-			<posy>10</posy>
+			<posy>55</posy>
 			<width>688</width>
 			<height>51</height>
 			<textcolor>a7ffffff</textcolor>

@@ -61,7 +61,18 @@
 		<posy>0</posy>
 		<width>772</width>
 		<height>720</height>
-		<texture>info/info_rightpaneltop.png</texture>
+		<texture>info/lite/info_rightpaneltop.png</texture>
+		<visible>!Skin.HasSetting(darkshowcase)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>508</posx>
+		<posy>0</posy>
+		<width>772</width>
+		<height>720</height>
+		<texture>info/night/info_rightpaneltop.png</texture>
+		<visible>Skin.HasSetting(darkshowcase)</visible>
 	</control>
 
 	<control type="group">
@@ -333,7 +344,7 @@
 	
 	</control>
 
-	<!--<include>Background_ContextBlack</include>-->
+	<!-- <include>Background_ContextBlack</include> -->
 	
 	</controls>
 </window>

@@ -709,6 +709,8 @@
 	</include>
 	
 <!-- Context menus -->
+
+    <!-- Light -->
 	
 	<include name="Objects_ContextMenuButton">
 		<description>button template</description>
@@ -720,6 +722,26 @@
 		<focusedcolor>FFdfdfdf</focusedcolor>
 		<texturenofocus>dialogs/context_nofocus.png</texturenofocus>
 		<texturefocus>dialogs/context_highlight.png</texturefocus>
+		<align>center</align>
+		<aligny>top</aligny>
+		<font>Font_ContextMenuButton</font>
+		<textoffsety>8</textoffsety>
+	</include>
+	
+    <!-- Night -->
+	
+	<include name="Objects_ContextMenuButtonNight">
+		<description>button template</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>39</height>
+		<width>308</width>
+		<textcolor>FF818181</textcolor>
+		<focusedcolor>FFdfdfdf</focusedcolor>
+		<texturenofocus>dialogs/night/context_nofocus.png</texturenofocus>
+		<texturefocus>dialogs/night/context_highlight.png</texturefocus>
+		<alttexturefocus>dialogs/night/context_highlight.png</alttexturefocus>
+        <alttexturenofocus>dialogs/night/context_nofocus.png</alttexturenofocus>
 		<align>center</align>
 		<aligny>top</aligny>
 		<font>Font_ContextMenuButton</font>
@@ -751,18 +773,16 @@
 		<posy>70</posy>
 		<width>936</width>
 		<height>49</height>
-		<textcolor>FFbec0c2</textcolor>
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsSectionTitleColorLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsSectionTitleColorNight</include>
 		<font>Font_SettingsSectionTitle</font>
 		<include>Animation_CommonFadeOpenClose</include>	
 	</include>
 
 	<include name="Objects_SettingsSectionMenuButtonVars">
-		<posx>0</posx>
-		<width>216</width>
-		<height>58</height>
 		<font>Font_SettingsSectionMenuButton</font>
-		<focusedcolor>FF262728</focusedcolor>
-		<selectedcolor>FF262728</selectedcolor>
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsLeftMenuFocusTextColorsLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsLeftMenuFocusTextColorsNight</include>
 		<textoffsety>7</textoffsety>
 		<textoffsetx>30</textoffsetx>
 		<aligny>top</aligny>
@@ -772,15 +792,15 @@
 
 	<include name="Objects_SettingsSectionMenuButton">
 		<include>Objects_SettingsSectionMenuButtonVars</include>
-		<textcolor>FFf5f5f5</textcolor>
-		<texturefocus>settings/settings_leftmenufocus.png</texturefocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsLeftMenuFocusLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsLeftMenuFocusNight</include>
 		<texturenofocus>-</texturenofocus>
 	</include>
 
 	<include name="Objects_SettingsSectionMenuButtonFocused">
 		<include>Objects_SettingsSectionMenuButtonVars</include>
-		<textcolor>FF262728</textcolor>
-		<texturenofocus>settings/settings_leftmenufocus.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsLeftMenuNoFocusLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsLeftMenuNoFocusNight</include>
 		<texturefocus>-</texturefocus>
 	</include>
 	
@@ -795,20 +815,14 @@
 	
 	<include name="Objects_SettingsDefaultRadioButton">
 		<description>Default RadioButton</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>936</width>
-		<height>49</height>
 		<font>Font_SettingsOptions</font>
-		<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
-		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-		<textcolor>FF939597</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
-		<pulseonselect>false</pulseonselect>
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsDefaultRadioButtonLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsDefaultRadioButtonNight</include>
 		<radiowidth>94</radiowidth>
 		<radioposx>850</radioposx>
 		<radioheight>65</radioheight>
 		<textoffsetx>50</textoffsetx>
+		<pulseonselect>false</pulseonselect>
 		<aligny>center</aligny>
 		<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
 		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
@@ -835,12 +849,14 @@
 		<width>712</width>
 		<posx>284</posx>
 	</include>
+	
+	<!-- OSD Button Light & Night -->
 
 	<include name="Objects_OSDButton">
 		<width>88</width>
 		<height>88</height>
-		<texturefocus>osd/osd_button_focus.png</texturefocus>
-		<texturenofocus>osd/osd_button_nofocus.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">OSDButtonLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">OSDButtonNight</include>
 	</include>
 	
 	<include name="Objects_OSDButtonTop">
@@ -886,6 +902,19 @@
 		<info>ListItem.Label</info>		
 	</include>
 	
+	<!-- OSD Settings Button Light & Night -->
+	
+	<include name="OSDSettingsButtonLight">
+		<texturefocus>osd/osd_settings_buttonf.png</texturefocus>
+		<texturenofocus>osd/osd_settings_buttonnf.png</texturenofocus>
+	</include>
+	
+	<include name="OSDSettingsButtonNight">
+		<width>781</width>
+		<texturefocus>osd/night/osd_settings_buttonf.png</texturefocus>
+		<texturenofocus>osd/night/osd_settings_buttonnf.png</texturenofocus>
+	</include>
+	
 	<include name="Objects_OSDSettingsButton">
 		<posx>0</posx>
 		<height>40</height>
@@ -895,8 +924,8 @@
 		<textoffsety>9</textoffsety>
 		<aligny>top</aligny>
 		<font>Font_OSDOptions</font>
-		<texturefocus>osd/osd_settings_buttonf.png</texturefocus>
-		<texturenofocus>osd/osd_settings_buttonnf.png</texturenofocus>		
+		<include condition="!Skin.HasSetting(darkshowcase)">OSDSettingsButtonLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">OSDSettingsButtonNight</include>	
 	</include>
 	
 <!-- Keyboard -->
@@ -947,8 +976,8 @@
 		<posy>0</posy>		
 		<width>110</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_doublenf.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_doublenf.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardDoubleKeyOffLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardDoubleKeyOffNight</include>
 		<include>Objects_KeyOffVars</include>
 	</include>
 	
@@ -956,8 +985,8 @@
 		<posy>0</posy>		
 		<width>110</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_doublenf.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_doublenf.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardDoubleKeyOffLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardDoubleKeyOffNight</include>
 		<include>Objects_KeyOffSymbolVars</include>
 	</include>	
 	
@@ -965,8 +994,8 @@
 		<posy>0</posy>			
 		<width>68</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_singlenf.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_singlenf.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardSingleKeyOffLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardSingleKeyOffNight</include>
 		<include>Objects_KeyOffVars</include>
 	</include>
 
@@ -974,17 +1003,17 @@
 		<posy>0</posy>			
 		<width>152</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_triplenf.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_triplenf.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardTripleKeyOffLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardTripleKeyOffNight</include>
 		<include>Objects_KeyOffVars</include>
 	</include>
 	
 	<include name="Objects_SpaceBarOff">
-		<posy>0</posy>			
+		<posy>0</posy>		
 		<width>278</width>
-		<height>68</height>
-		<texturefocus>keyboard/keyboard_spacef.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_spacenf.png</texturenofocus>
+		<height>68</height>	
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardSpaceBarOffLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardSpaceBarOffNight</include>
 		<include>Objects_KeyOffVars</include>
 	</include>
 
@@ -992,8 +1021,8 @@
 		<posy>0</posy>			
 		<width>110</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_doublef.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_doublef.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardDoubleKeyOnLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardDoubleKeyOnNight</include>
 		<include>Objects_KeyOnVars</include>
 	</include>
 	
@@ -1001,8 +1030,8 @@
 		<posy>0</posy>			
 		<width>110</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_doublef.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_doublef.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardDoubleKeyOnLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardDoubleKeyOnNight</include>
 		<include>Objects_KeyOnSymbolVars</include>
 	</include>	
 	
@@ -1010,8 +1039,8 @@
 		<posy>0</posy>			
 		<width>68</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_singlef.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_singlef.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardSingleKeyOnLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardSingleKeyOnNight</include>
 		<include>Objects_KeyOnVars</include>
 	</include>
 
@@ -1019,8 +1048,8 @@
 		<posy>0</posy>			
 		<width>152</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_triplef.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_triplef.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardTripleKeyOnLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardTripleKeyOnNight</include>
 		<include>Objects_KeyOnVars</include>
 	</include>
 	
@@ -1028,8 +1057,8 @@
 		<posy>0</posy>			
 		<width>278</width>
 		<height>68</height>
-		<texturefocus>keyboard/keyboard_spacef.png</texturefocus>		
-		<texturenofocus>keyboard/keyboard_spacef.png</texturenofocus>
+		<include condition="!Skin.HasSetting(darkshowcase)">KeyboardSpaceBarOnLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">KeyboardSpaceBarOnNight</include>
 		<include>Objects_KeyOnVars</include>		
 	</include>	
 

@@ -345,6 +345,15 @@
 	
 <!-- Multiplex -->
 
+  	<!-- Title Mod -->
+
+	<font>
+		<name>Font_MultiplexTitleMod</name>
+		<filename>aeon_rss.ttf</filename>
+		<size>25</size>
+		<shadow>55000000</shadow>
+	</font>
+
     <font>
       <name>Font_MultiplexMainLabel</name>
       <filename>aeon_settings.ttf</filename>

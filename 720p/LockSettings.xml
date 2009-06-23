@@ -10,19 +10,16 @@
 	<controls>
 	
 	<control type="group">
-		<posx>206</posx>
-		<posy>202</posy>
-		<width>869</width>
-		<height>317</height>	
+		
+		<!-- Night & Light Sizes -->
 	
-		<control type="image">
-			<description>background image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>869</width>
-			<height>317</height>
-			<texture>dialogs/scrapersettings_back.png</texture>
-		</control>
+		<include condition="!Skin.HasSetting(darkshowcase)">ContentSizesLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">ContentSizesNight</include>
+	
+		<!-- Light & Night Background Image -->
+		
+		<include condition="!Skin.HasSetting(darkshowcase)">LockSettingsBackLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">LockSettingsBackNight</include>
 		
 		<control type="label" id="2">
 			<description>Settings Label</description>
@@ -58,10 +55,8 @@
 		
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<posx>10</posx>
-			<posy>35</posy>
-			<width>679</width>
-			<height>246</height>
+			<include condition="!Skin.HasSetting(darkshowcase)">LockSettingsControlAreaSizesLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">LockSettingsControlAreaSizesNight</include>
 			<itemgap>0</itemgap>
 			<onup>5</onup>
 			<ondown>5</ondown>
@@ -70,24 +65,16 @@
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
-			<width>470</width>
-			<height>41</height>
-			<font>Font_ContextMenuButton</font>
-			<textcolor>FF939597</textcolor>
-			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<font>Font_ContextMenuButton</font>		
 			<textoffsetx>20</textoffsetx>
 			<aligny>center</aligny>
-			<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
-			<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+			<include condition="!Skin.HasSetting(darkshowcase)">ContentRadioButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ContentRadioButtonNight</include>
 		</control>
 		<control type="radiobutton" id="8">
-			<width>470</width>
-			<height>41</height>
 			<font>Font_ContextMenuButton</font>
-			<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
-			<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
-			<textcolor>FF939597</textcolor>
-			<focusedcolor>FFFFFFFF</focusedcolor>
+			<include condition="!Skin.HasSetting(darkshowcase)">ContentRadioButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ContentRadioButtonNight</include>
 			<pulseonselect>false</pulseonselect>
 			<radiowidth>94</radiowidth>
 			<radioposx>595</radioposx>
@@ -100,19 +87,14 @@
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>directory content select spincontrol</description>
-			<width>470</width>
-			<height>41</height>
 			<font>Font_ContextMenuButton</font>
-			<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
-			<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
 			<textureup>settings/spin-up.png</textureup>
 			<texturedown>settings/spin-down.png</texturedown>
 			<textureupfocus>settings/spin-up-focus.png</textureupfocus>
 			<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-			<textcolor>FF939597</textcolor>
-			<focusedcolor>FFFFFFFF</focusedcolor>
+			<include condition="!Skin.HasSetting(darkshowcase)">ContentSpinControlLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ContentSpinControlNight</include>
 			<pulseonselect>false</pulseonselect>
-			<spinposx>-4</spinposx>
 			<spinwidth>40</spinwidth>
 			<spinheight>65</spinheight>
 			<textoffsetx>20</textoffsetx>
@@ -146,43 +128,35 @@
 		<control type="group" id="9001">		
 		<control type="button" id="28">
 			<description>ok button</description>
-			<posx>689</posx>
 			<posy>240</posy>
-			<width>156</width>
 			<height>41</height>
 			<font>Font_SetContentMenu</font>
 			<label>186</label>
 			<align>left</align>
-			<textcolor>FFf5f5f5</textcolor>
-			<focusedcolor>FF262728</focusedcolor>
-			<selectedcolor>FF262728</selectedcolor>
 			<textoffsetx>20</textoffsetx>
 			<onleft>5</onleft>
 			<onright>5</onright>
 			<onup>29</onup>
 			<ondown>29</ondown>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+			<include condition="!Skin.HasSetting(darkshowcase)">ContentButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ContentButtonNight</include>
 		</control>
 		<control type="button" id="29">
 			<description>cancel button</description>
-			<posx>689</posx>
 			<posy>199</posy>
-			<width>156</width>
 			<height>41</height>
 			<font>Font_SetContentMenu</font>
 			<label>222</label>
 			<align>left</align>
-			<textcolor>FFf5f5f5</textcolor>
-			<focusedcolor>FF262728</focusedcolor>
-			<selectedcolor>FF262728</selectedcolor>
 			<textoffsetx>20</textoffsetx>
 			<onleft>5</onleft>
 			<onright>5</onright>
 			<onup>28</onup>
 			<ondown>28</ondown>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+			<include condition="!Skin.HasSetting(darkshowcase)">ContentButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ContentButtonNight</include>
 		</control>
 		</control>	
 		<control type="image">
@@ -192,6 +166,7 @@
 			<width>869</width>
 			<height>317</height>
 			<texture>dialogs/setcontent_front.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>	
 		
 	</control>

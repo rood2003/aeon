@@ -717,7 +717,8 @@
 			<posy>315</posy>
 			<width>1280</width>
 			<height>405</height>
-			<texture>list/list_floor.png</texture>
+			<include condition="!Skin.HasSetting(darkshowcase)">ListFloorLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ListFloorNight</include>
 			<visible>Control.IsVisible(50)</visible>
 
 			<include>Animation_CommonFade</include>
@@ -1005,7 +1006,7 @@
 			</control>
 		</control>
 	</include>
-
+	
 	<include name="Furniture_DarkGradient">
 		<control type="image">
 			<posx>0</posx>
@@ -1015,9 +1016,8 @@
 			<texture>showcase/showcase_gradient.png</texture>
 			<visible>Skin.HasSetting(darkshowcase) + [Control.IsVisible(57) | Control.IsVisible(52)]</visible>
 			<include>Animation_CommonFade</include>
-		</control>		
+		</control>
 	</include>
-	
 	
 <!-- Settings windows -->
 
@@ -1028,7 +1028,8 @@
 			<posy>23</posy>
 			<width>1233</width>
 			<height>673</height>
-			<texture>settings/settings_panelback.png</texture>
+			<include condition="!Skin.HasSetting(darkshowcase)">SettingsBackPanelLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">SettingsBackPanelNight</include>
 		</control>
 	</include>
 
@@ -1040,20 +1041,18 @@
 			<width>1196</width>
 			<height>651</height>
 			<texture>settings/settings_panelfront.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>
 	</include>
 
 	<include name="Furniture_SettingsInternalBackPanel">
-		<posx>234</posx>
-		<posy>40</posy>
-		<width>1035</width>
-		<height>638</height>
-		<texture>settings/settings_intframe_bottom.png</texture>	
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsInternalBackPanelLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsInternalBackPanelNight</include>
 	</include>
 
 	<include name="Furniture_SettingsSlideVars">
 		<width>840</width>
-		<height>472</height>	
+		<height>472</height>
 	</include>
 	
 	<include name="Furniture_SettingsVHPVars">

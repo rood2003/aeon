@@ -7,7 +7,7 @@
 		<posy>561</posy>
 		<width>1280</width>
 		<height>159</height>
-		<include>Animation_OSDFade</include>	
+		<include>Animation_OSDFade</include>
 		<visible>!Window.IsActive(125)</visible>
 	
 	<control type="image">
@@ -16,8 +16,8 @@
 		<posy>0</posy>
 		<height>159</height>
 		<width>1280</width>
-		<colordiffuse>cdffffff</colordiffuse>
-		<texture>osd/osd_back.png</texture>
+		<include condition="!Skin.HasSetting(darkshowcase)">OSDBackLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">OSDBackNight</include>
 	</control>
 
 	<control type="grouplist" id="213">
@@ -37,7 +37,7 @@
 		</control>		
 		<control type="button" id="9">
 			<include>Objects_OSDButton</include>
-			<onclick>XBMC.ActivateWindow(124)</onclick>		
+			<onclick>XBMC.ActivateWindow(28)</onclick>		
 		</control>
 		<control type="button" id="10">
 			<include>Objects_OSDButton</include>
@@ -142,9 +142,8 @@
 		<height>15</height>
 		<info>Player.Progress</info>
 		<texturebg>osd/osd_progress_back.png</texturebg>
-		<lefttexture>osd/osd_progress_left.png</lefttexture>
-		<midtexture>osd/osd_progress_mid.png</midtexture>
-		<righttexture>osd/osd_progress_right.png</righttexture>
+		<include condition="!Skin.HasSetting(darkshowcase)">OSDProgressLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">OSDProgressNight</include>
 		<overlaytexture>-</overlaytexture>
 		<visible>true</visible>
 	</control>

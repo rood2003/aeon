@@ -22,7 +22,8 @@
 			<posy>0</posy>
 			<width>847</width>
 			<height>328</height>
-			<texture>dialogs/addsource_back.png</texture>
+			<include condition="!Skin.HasSetting(darkshowcase)">MediaSourceBackLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">MediaSourceBackNight</include>
 		</control>
 	
 		<control type="list" id="10">
@@ -67,11 +68,8 @@
 		</control>
 		
 		<control type="image">
-			<posx>18</posx>
-			<posy>46</posy>
-			<width>653</width>
-			<height>174</height>
-			<texture>dialogs/addsource_highlighttop.png</texture>
+			<include condition="!Skin.HasSetting(darkshowcase)">MediaAddSourceTopLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">MediaAddSourceTopNight</include>
 			<include>Animation_CommonFade</include>
 			<visible>Control.HasFocus(10)</visible>
 		</control>
@@ -79,25 +77,26 @@
 		<control type="label" id="0">
 			<description>Path Label</description>
 			<posx>10</posx>
-			<posy>13</posy>
+			<posy>9</posy>
 			<width>673</width>
 			<height>28</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>FFcbcbcb</textcolor>
+			<textcolor>FFa2a2a2</textcolor>
 			<font>Font_SetContentMenu</font>
 			<label>31221</label>
-			<animation effect="fade" start="100" end="60" time="300" condition="!Control.HasFocus(10)">Conditional</animation>			
+			<animation effect="fade" start="100" end="60" time="300" condition="!Control.HasFocus(10)">Conditional</animation>		
 		</control>
 		<control type="label" id="0">
 			<description>Name Label</description>
 			<posx>10</posx>
-			<posy>222</posy>
+			<posy>223</posy>
 			<width>673</width>
 			<height>28</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>FFcbcbcb</textcolor>
+			<textcolor>FFa2a2a2</textcolor>
+			<selectedcolor>FFe8e8e8</selectedcolor>
 			<font>Font_SetContentMenu</font>
 			<label>31222</label>
 			<animation effect="fade" start="100" end="60" time="300" condition="!Control.HasFocus(12)">Conditional</animation>
@@ -124,11 +123,8 @@
 		</control>
 
 		<control type="image">
-			<posx>18</posx>
-			<posy>255</posy>
-			<width>653</width>
-			<height>51</height>
-			<texture>dialogs/addsource_highlight.png</texture>
+			<include condition="!Skin.HasSetting(darkshowcase)">MediaAddSourceLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">MediaAddSourceNight</include>
 			<include>Animation_CommonFade</include>
 			<visible>Control.HasFocus(12)</visible>
 		</control>
@@ -139,101 +135,81 @@
 			<control type="button" id="11">
 				<description>Button: Browse</description>
 				<posy>0</posy>
-				<width>156</width>
-				<height>41</height>
 				<font>Font_SetContentMenu</font>
 				<label>1024</label>
 				<align>left</align>
-				<textcolor>FFf5f5f5</textcolor>
-				<focusedcolor>FF262728</focusedcolor>
-				<selectedcolor>FF262728</selectedcolor>
 				<textoffsetx>20</textoffsetx>
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<onup>18</onup>
 				<ondown>13</ondown>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+				<include condition="!Skin.HasSetting(darkshowcase)">MediaSourceButtonLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">MediaSourceButtonNight</include>
 			</control>
 			
 			<control type="button" id="13">
 				<description>Button: Add</description>
 				<posy>41</posy>
-				<width>156</width>
-				<height>41</height>
 				<font>Font_SetContentMenu</font>
 				<label>15019</label>
 				<align>left</align>
-				<textcolor>FFf5f5f5</textcolor>
-				<focusedcolor>FF262728</focusedcolor>
-				<selectedcolor>FF262728</selectedcolor>
 				<textoffsetx>20</textoffsetx>
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<onup>11</onup>
 				<ondown>14</ondown>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+				<include condition="!Skin.HasSetting(darkshowcase)">MediaSourceButtonLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">MediaSourceButtonNight</include>
 			</control>
 			
 			<control type="button" id="14">
 				<description>Button: Remove</description>
 				<posy>82</posy>
-				<width>156</width>
-				<height>41</height>
 				<font>Font_SetContentMenu</font>
 				<label>1210</label>
 				<align>left</align>
-				<textcolor>FFf5f5f5</textcolor>
-				<focusedcolor>FF262728</focusedcolor>
-				<selectedcolor>FF262728</selectedcolor>
 				<textoffsetx>20</textoffsetx>
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<onup>13</onup>
 				<ondown>19</ondown>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+				<include condition="!Skin.HasSetting(darkshowcase)">MediaSourceButtonLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">MediaSourceButtonNight</include>
 			</control>
 
 			<control type="button" id="19">
 				<description>Button: Cancel</description>
 				<posy>123</posy>
-				<width>156</width>
-				<height>41</height>
 				<font>Font_SetContentMenu</font>
 				<label>222</label>
 				<align>left</align>
-				<textcolor>FFf5f5f5</textcolor>
-				<focusedcolor>FF262728</focusedcolor>
-				<selectedcolor>FF262728</selectedcolor>
 				<textoffsetx>20</textoffsetx>
 				<onleft>12</onleft>
 				<onright>12</onright>
 				<onup>14</onup>
 				<ondown>18</ondown>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+				<include condition="!Skin.HasSetting(darkshowcase)">MediaSourceButtonLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">MediaSourceButtonNight</include>
 			</control>
 			
 			<control type="button" id="18">
 				<description>Button: OK</description>
 				<posy>164</posy>
-				<width>156</width>
-				<height>41</height>
 				<font>Font_SetContentMenu</font>
 				<label>186</label>
 				<align>left</align>
-				<textcolor>FFf5f5f5</textcolor>
-				<focusedcolor>FF262728</focusedcolor>
-				<selectedcolor>FF262728</selectedcolor>
 				<textoffsetx>20</textoffsetx>
 				<onleft>12</onleft>
 				<onright>12</onright>
 				<onup>19</onup>
 				<ondown>11</ondown>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+				<include condition="!Skin.HasSetting(darkshowcase)">MediaSourceButtonLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">MediaSourceButtonNight</include>
 			</control>
 		</control>
 
@@ -244,6 +220,7 @@
 			<width>847</width>
 			<height>328</height>
 			<texture>dialogs/addsource_front.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>
 		
 	</control>

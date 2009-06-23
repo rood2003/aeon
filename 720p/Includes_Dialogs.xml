@@ -13,7 +13,8 @@
 			<posy>0</posy>
 			<width>509</width>
 			<height>91</height>
-			<texture>dialogs/scan_backg.png</texture>		
+			<include condition="!Skin.HasSetting(darkshowcase)">ScanBackLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ScanBackNight</include>		
 		</control>	
 	</include>
 
@@ -56,7 +57,8 @@
 		<reveal>true</reveal>
 		<texturebg>dialogs/scan_blank.png</texturebg>
 		<lefttexture>common/blank.png</lefttexture>
-		<midtexture>dialogs/scan_fill.png</midtexture>
+		<include condition="!Skin.HasSetting(darkshowcase)">ScanFillLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">ScanFillNight</include>
 		<righttexture>common/blank.png</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</include>
@@ -65,7 +67,8 @@
 		<posx>105</posx>
 		<width>390</width>
 		<height>21</height>
-		<textcolor>FF323232</textcolor>
+		<include condition="!Skin.HasSetting(darkshowcase)">TextColorLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">TextColorNight</include>
 		<align>left</align>
 		<font>Font_ProgressLabel</font>		
 	</include>
@@ -105,5 +108,5 @@
 		<include>Dialogs_Pos4</include>
 		<include>Dialogs_LabelVars</include>
 	</include>	
-	
+		
 </includes>

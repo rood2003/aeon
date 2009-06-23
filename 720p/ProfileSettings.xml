@@ -19,7 +19,7 @@
 	<control type="group">
 		<posx>217</posx>
 		<posy>216</posy>
-		<width>847</width>
+		<width>848</width>
 		<height>288</height>
 		<visible>![Window.IsActive(103) | Window.IsActive(126) | Window.IsActive(131)]</visible>
 		
@@ -27,9 +27,9 @@
 			<description>background image</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>847</width>
 			<height>288</height>
-			<texture>dialogs/profilesettings_back.png</texture>
+			<include condition="!Skin.HasSetting(darkshowcase)">ProfileSettingsBackLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ProfileSettingsBackNight</include>
 		</control>
 
 		<control type="image" id="2">
@@ -43,7 +43,7 @@
 			<colordiffuse>d0FFFFFF</colordiffuse>
 		</control>
 
-		<control type="label" id="0">
+		<!-- <control type="label" id="0">
 			<description>Profile Name</description>
 			<posx>180</posx>
 			<posy>116</posy>
@@ -94,7 +94,7 @@
 			<onleft>60</onleft>
 			<onright>60</onright>
 			<ondown>2</ondown>
-		</control>
+		</control> -->
 
 		<control type="grouplist" id="5">
 			<description>control area</description>
@@ -111,25 +111,17 @@
 
 		<control type="button" id="7">
 			<description>Default Button</description>
-			<width>405</width>
-			<height>41</height>
-			<font>Font_ContextMenuButton</font>
-			<textcolor>FF939597</textcolor>
-			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<font>Font_ContextMenuButton</font>	
 			<textoffsetx>20</textoffsetx>
 			<aligny>center</aligny>
-			<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
-			<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+			<include condition="!Skin.HasSetting(darkshowcase)">ProfileContentButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ProfileContentButtonNight</include>
 		</control>
 
 		<control type="radiobutton" id="8">
-			<width>405</width>
-			<height>41</height>
 			<font>Font_ContextMenuButton</font>
-			<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
-			<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
-			<textcolor>FF939597</textcolor>
-			<focusedcolor>FFFFFFFF</focusedcolor>
+			<include condition="!Skin.HasSetting(darkshowcase)">ProfileContentButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ProfileContentButtonNight</include>
 			<pulseonselect>false</pulseonselect>
 			<radiowidth>94</radiowidth>
 			<radioposx>595</radioposx>
@@ -143,17 +135,13 @@
 
 		<control type="spincontrolex" id="9">
 			<description>directory content select spincontrol</description>
-			<width>405</width>
-			<height>41</height>
 			<font>Font_ContextMenuButton</font>
-			<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
-			<texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
+			<include condition="!Skin.HasSetting(darkshowcase)">ProfileContentButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ProfileContentButtonNight</include>
 			<textureup>settings/spin-up.png</textureup>
 			<texturedown>settings/spin-down.png</texturedown>
 			<textureupfocus>settings/spin-up-focus.png</textureupfocus>
 			<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-			<textcolor>FF939597</textcolor>
-			<focusedcolor>FFFFFFFF</focusedcolor>
 			<pulseonselect>false</pulseonselect>
 			<spinposx>-4</spinposx>
 			<spinwidth>40</spinwidth>
@@ -185,49 +173,42 @@
 		<width>350</width>
 		<height>5</height>
 		<texture>-</texture>
+		<visible>!Skin.HasSetting(darkshowcase)</visible>
 	</control>
 
 	<control type="group" id="9001">		
 		<control type="button" id="28">
 			<description>ok button</description>
-			<posx>683</posx>
 			<posy>230</posy>
-			<width>154</width>
 			<height>41</height>
 			<font>Font_SetContentMenu</font>
 			<label>186</label>
 			<align>left</align>
-			<textcolor>FFf5f5f5</textcolor>
-			<focusedcolor>FF262728</focusedcolor>
-			<selectedcolor>FF262728</selectedcolor>
 			<textoffsetx>20</textoffsetx>
 			<onleft>5</onleft>
 			<onright>5</onright>
 			<onup>29</onup>
 			<ondown>29</ondown>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+			<include condition="!Skin.HasSetting(darkshowcase)">ProfileButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ProfileButtonNight</include>
 		</control>
 
 		<control type="button" id="29">
 			<description>cancel button</description>
-			<posx>683</posx>
 			<posy>189</posy>
-			<width>154</width>
 			<height>41</height>
 			<font>Font_SetContentMenu</font>
 			<label>222</label>
 			<align>left</align>
-			<textcolor>FFf5f5f5</textcolor>
-			<focusedcolor>FF262728</focusedcolor>
-			<selectedcolor>FF262728</selectedcolor>
 			<textoffsetx>20</textoffsetx>
 			<onleft>5</onleft>
 			<onright>5</onright>
 			<onup>28</onup>
 			<ondown>28</ondown>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+			<include condition="!Skin.HasSetting(darkshowcase)">ProfileButtonLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ProfileButtonNight</include>
 		</control>
 		</control>
 		
@@ -235,9 +216,8 @@
 			<description>foreground image</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>847</width>
-			<height>288</height>
-			<texture>dialogs/profilesettings_front.png</texture>
+			<include condition="!Skin.HasSetting(darkshowcase)">ProfileSettingsFrontLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ProfileSettingsFrontNight</include>
 		</control>
 	</control>
 

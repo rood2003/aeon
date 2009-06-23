@@ -7,6 +7,7 @@
 		<include>FullscreenDimensions</include>
 		<imagepath>backdrops/default_settings</imagepath>
 		<info>Skin.String(CustomSettings)</info>
+		<include>BackgroundTimings</include>
 	</control>
 
 	<include>Furniture_SettingsBackPanel</include>
@@ -86,6 +87,20 @@
 			<label>USE LEGACY 'DARK' MULTIPLEX</label>
 			<onclick>Skin.ToggleSetting(oldmultiplex)</onclick>
 			<selected>Skin.HasSetting(oldmultiplex)</selected>
+		</control>
+		
+		<control type="radiobutton" id="408">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>USE DVD CASES IN MULTIPLEX</label>
+			<onclick>Skin.ToggleSetting(dvdcase)</onclick>
+			<selected>Skin.HasSetting(dvdcase)</selected>
+		</control>
+		
+		<control type="radiobutton" id="409">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>SHOW TITLE IN MULTIPLEX INFO PANEL</label>
+			<onclick>Skin.ToggleSetting(showtitle)</onclick>
+			<selected>Skin.HasSetting(showtitle)</selected>
 		</control>		
 		
 	</control>
@@ -364,7 +379,7 @@
 
 	<include>Furniture_SettingsFrontPanel</include>
 	
-	<!--<include>Background_ContextBlack</include>-->
+	<!-- <include>Background_ContextBlack</include> -->
 	<include>Furniture_Debug</include>
 	
 	</controls>

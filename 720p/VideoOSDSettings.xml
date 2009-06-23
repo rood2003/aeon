@@ -15,7 +15,8 @@
 		<posy>40</posy>
 		<width>881</width>
 		<height>481</height>
-		<texture>osd/osd_settings_back.png</texture>
+		<include condition="!Skin.HasSetting(darkshowcase)">OSDSettingsBackLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">OSDSettingsBackNight</include>
 	</control>
 
 	<control type="grouplist" id="5">

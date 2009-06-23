@@ -7,6 +7,7 @@
 		<include>FullscreenDimensions</include>
 		<imagepath>backdrops/default_settings</imagepath>
 		<info>Skin.String(CustomSettings)</info>
+		<include>BackgroundTimings</include>
 		<animation effect="fade" start="0" end="100" time="200" condition="![Window.Previous(4) | Window.Previous(Home)]">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="200" condition="![Window.Next(4) | Window.Next(Home)]">WindowClose</animation>		
 	</control>
@@ -55,12 +56,10 @@
 			<posy>0</posy>
 			<width>216</width>
 			<height>58</height>
-			<texturefocus>settings/settings_leftmenufocus.png</texturefocus>
+			<include condition="!Skin.HasSetting(darkshowcase)">SettingsLeftMenuFocusLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">SettingsLeftMenuFocusNight</include>
 			<texturenofocus>-</texturenofocus>
 			<font>Font_SettingsSectionMenuButton</font>
-			<textcolor>FFf5f5f5</textcolor>
-			<focusedcolor>FF262728</focusedcolor>
-			<selectedcolor>FF262728</selectedcolor>
 			<textoffsety>7</textoffsety>
 			<textoffsetx>30</textoffsetx>
 			<aligny>top</aligny>
@@ -76,20 +75,15 @@
 			<width>1196</width>
 			<height>651</height>
 			<texture>settings/settings_panelfront.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>
 	</control>
 
 	<control type="button" id="7">
 		<description>Default Button</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>936</width>
-		<height>49</height>
 		<font>Font_SettingsOptions</font>
-		<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
-		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-		<textcolor>FFbbbbbb</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsDefaultRadioButtonLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsDefaultRadioButtonNight</include>
 		<pulseonselect>false</pulseonselect>
 		<textoffsetx>50</textoffsetx>
 		<aligny>center</aligny>
@@ -98,15 +92,9 @@
 
 	<control type="radiobutton" id="8">
 		<description>Default RadioButton</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>936</width>
-		<height>49</height>
 		<font>Font_SettingsOptions</font>
-		<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
-		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-		<textcolor>FFbbbbbb</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsDefaultRadioButtonLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsDefaultRadioButtonNight</include>
 		<pulseonselect>false</pulseonselect>
 		<radiowidth>94</radiowidth>
 		<radioposx>850</radioposx>
@@ -120,14 +108,8 @@
 
 	<control type="spincontrolex" id="9">
 		<description>Default SpinControlex</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>936</width>
-		<height>49</height>
-		<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
-		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-		<textcolor>FFbbbbbb</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
+		<include condition="!Skin.HasSetting(darkshowcase)">SettingsDefaultRadioButtonLight</include>
+		<include condition="Skin.HasSetting(darkshowcase)">SettingsDefaultRadioButtonNight</include>
 		<textureup>settings/spin-up.png</textureup>
 		<texturedown>settings/spin-down.png</texturedown>
 		<textureupfocus>settings/spin-up-focus.png</textureupfocus>
@@ -143,7 +125,7 @@
 		<onright>SetFocus(1)</onright>
 	</control>
 
-	<!--<include>Background_ContextBlack</include>-->
+	<!-- <include>Background_ContextBlack</include> -->
 
 	<include>Settings_Welcome</include>
 	
