@@ -91,7 +91,7 @@
 		
 		<control type="radiobutton" id="408">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>USE DVD CASES IN MULTIPLEX</label>
+			<label>USE CD/DVD CASES</label>
 			<onclick>Skin.ToggleSetting(dvdcase)</onclick>
 			<selected>Skin.HasSetting(dvdcase)</selected>
 		</control>
