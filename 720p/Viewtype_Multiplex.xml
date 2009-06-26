@@ -82,20 +82,8 @@
 				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)</visible>				
 			</control>	
 			
-			<!-- Title -->
-			
-			<control type="label">
-				<width>1080</width>
-				<height>14</height>
-				<posx>100</posx>
-				<posy>3</posy>
-				<align>center</align>
-				<font>Font_MultiplexTitleMod</font>
-				<include condition="!Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorLight</include>
-				<include condition="Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorNight</include>
-				<label fallback="31425">$INFO[Container(52).ListItem.Title]</label>
-				<visible>Skin.HasSetting(showtitle)</visible>
-			</control>
+			<!-- Title Mod (-> see Includes_TitleMod.xml) -->
+			<include>TitleModMovies</include>
 			
 			<control type="group">
 				<posx>105</posx>
@@ -421,77 +409,8 @@
 				<include condition="Skin.HasSetting(darkshowcase) + Skin.HasSetting(showtitle)">MultiplexTVTitleNight</include>
 			</control>
 			
-			<!-- Title Mod Group -->
-			
-			<control type="group">
-				<posx>105</posx>
-			
-				<!-- Title TV Shows-->
-				
-				<control type="label">
-					<width>1070</width>
-					<posx>0</posx>
-					<posy>3</posy>
-					<align>center</align>
-					<font>Font_MultiplexTitleMod</font>
-					<include condition="!Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorNight</include>
-					<label>$INFO[ListItem.TVShowTitle]</label>
-					<visible>Skin.HasSetting(showtitle) + Container.Content(tvshows)</visible>
-				</control>
-				
-				<!-- Title TV Seasons-->
-				
-				<control type="label">
-					<width>1070</width>
-					<posx>0</posx>
-					<posy>3</posy>
-					<align>center</align>
-					<font>Font_MultiplexTitleMod</font>
-					<include condition="!Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorNight</include>
-					<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title]</label>
-					<visible>Skin.HasSetting(showtitle) + Container.Content(seasons) + !IsEmpty(ListItem.Title)</visible>
-				</control>
-				
-				<control type="label">
-					<width>1070</width>
-					<posx>0</posx>
-					<posy>3</posy>
-					<align>center</align>
-					<font>Font_MultiplexTitleMod</font>
-					<include condition="!Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorNight</include>
-					<label>$INFO[ListItem.TVShowTitle] - $LOCALIZE[20366]</label>
-					<visible>Skin.HasSetting(showtitle) + Container.Content(seasons) + IsEmpty(ListItem.Title)</visible>
-				</control>
-				
-				<!-- Title TV Episodes-->
-				
-				<control type="label">
-					<width>1070</width>
-					<posx>0</posx>
-					<posy>3</posy>
-					<align>left</align>
-					<font>Font_MultiplexTitleMod</font>
-					<include condition="!Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorNight</include>
-					<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]: $INFO[ListItem.Title]</label>
-					<visible>Skin.HasSetting(showtitle) + Container.Content(episodes)</visible>
-				</control>
-				
-				<control type="label">
-					<width>1070</width>
-					<posy>3</posy>
-					<posx>1070</posx>
-					<align>right</align>
-					<font>Font_MultiplexTitleMod</font>
-					<include condition="!Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorLight</include>
-					<include condition="Skin.HasSetting(darkshowcase)">MultiplexTitleModTextColorNight</include>
-					<label>$INFO[ListItem.TVShowTitle]</label>
-					<visible>Skin.HasSetting(showtitle) + Container.Content(episodes)</visible>
-				</control>
-			</control>
+			<!-- Title Mod (-> see Includes_TitleMod.xml) -->
+			<include>TitleModTV</include>
 			
 			<control type="group">
 				<posx>105</posx>
@@ -702,81 +621,20 @@
 			
 		</control>	
 	</include>
-
+	
 	<include name="MultiplexMovieVarsWrap">
 		<posx>100</posx>
 		<posy>478</posy>
 		<width>1080</width>
 		<height>300</height>	
-	</include>
-	
+	</include>	
+			
 	<include name="MultiplexTVVarsWrap">
 		<posx>95</posx>
 		<posy>528</posy>
 		<width>1090</width>
 		<height>300</height>	
-	</include>		
-
-	<include name="MultiplexIconDimensionsWrap">
-		<posx>6</posx>
-		<posy>0</posy>
-		<width>107</width>
-		<height>165</height>	
-		<fadetime>200</fadetime>
-	</include>
-	
-	<include name="MultiplexIconDimensionsWrapReflect">
-		<posx>6</posx>
-		<posy>165</posy>
-		<width>107</width>
-		<height>165</height>
-		<colordiffuse>56FFFFFF</colordiffuse>
-		<fadetime>200</fadetime>		
-	</include>
-	
-	<!-- DVD Wraps -->
-	
-	<include name="MultiplexIconDimensionsWrapDVD">
-		<posx>0</posx>
-		<posy>4</posy>
-		<width>120</width>
-		<height>151</height>	
-		<fadetime>200</fadetime>
-	</include>
-	
-	<include name="MultiplexIconDimensionsWrapDVDFront">
-		<posx>0</posx>
-		<posy>4</posy>
-		<width>120</width>
-		<height>151</height>	
-		<fadetime>200</fadetime>
-	</include>
-	
-	<include name="MultiplexIconDimensionsWrapDVDCover">
-		<posx>19</posx>
-		<posy>9</posy>
-		<width>92</width>
-		<height>140</height>	
-		<fadetime>200</fadetime>
-	</include>
-	
-	<include name="MultiplexIconDimensionsWrapReflectDVD">
-		<posx>0</posx>
-		<posy>150</posy>
-		<width>120</width>
-		<height>151</height>
-		<colordiffuse>75FFFFFF</colordiffuse>
-		<fadetime>200</fadetime>		
-	</include>
-	
-	<include name="MultiplexIconDimensionsWrapReflectDVDCover">
-		<posx>19</posx>
-		<posy>157</posy>
-		<width>92</width>
-		<height>140</height>
-		<colordiffuse>55FFFFFF</colordiffuse>
-		<fadetime>200</fadetime>		
-	</include>
+	</include>	
 	
 	<include name="MultiplexIconDimensionsTVWrap">
 		<posx>4</posx>
@@ -791,7 +649,7 @@
 		<width>204</width>
 		<height>114</height>
 		<colordiffuse>aaFFFFFF</colordiffuse>		
-	</include>	
+	</include>
 	
 	<include name="MultiplexFocusMovies">
 		<focusposition>4</focusposition>	
@@ -809,7 +667,7 @@
 		<onup>110</onup>
 	</include>
 	
-	<!-- DVD Includes -->
+	<!-- DVD Includes (-> see Includes_CDDVDMod.xml for extra includes) -->
 	
 	<include name="MultiplexNormalCoversNoFocus">
 		<control type="image">
@@ -877,29 +735,29 @@
 	
 	<include name="MultiplexDVDCoversNoFocus">
 		<control type="image">
-			<include>MultiplexIconDimensionsWrapDVD</include>
-			<texture>multiplex/boxes/multiplex_cback.png</texture>
+			<include>MultiplexIconDimensionsWrapDVDCase</include>
+			<texture>multiplex/boxes/multiplex_border.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsWrapDVDCover</include>
-			<texture>defaultvideo.png</texture>
+			<texture diffuse="multiplex/boxes/multiplex_mask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsWrapDVDCover</include>
-			<texture background="true">defaultvideo.png</texture>
+			<texture background="true" diffuse="multiplex/boxes/multiplex_mask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
 		</control>
 		<control type="image">
-			<include>MultiplexIconDimensionsWrapDVDFront</include>
-			<texture>multiplex/boxes/multiplex_cfront.png</texture>
+			<include>MultiplexIconDimensionsWrapDVDCase</include>
+			<texture>multiplex/boxes/multiplex_glass.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 		<control type="image">
-			<include>MultiplexIconDimensionsWrapReflectDVD</include>
-			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_cback.png</texture>
+			<include>MultiplexIconDimensionsWrapReflectDVDCase</include>
+			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_border.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 		<control type="image">
@@ -909,41 +767,41 @@
 			<info>ListItem.Icon</info>
 		</control>	
 		<control type="image">
-			<include>MultiplexIconDimensionsWrapReflectDVD</include>
-			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_cfront.png</texture>
+			<include>MultiplexIconDimensionsWrapReflectDVDCase</include>
+			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_glass.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 	</include>
 	
 	<include name="MultiplexDVDCoversFocus">
 		<control type="image">
-			<include>MultiplexIconDimensionsWrapDVD</include>
-			<texture>multiplex/boxes/multiplex_cback.png</texture>
+			<include>MultiplexIconDimensionsWrapDVDCase</include>
+			<texture>multiplex/boxes/multiplex_border.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsWrapDVDCover</include>
-			<texture>defaultvideo.png</texture>
+			<texture diffuse="multiplex/boxes/multiplex_mask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
 		<control type="image">
 			<include>MultiplexIconDimensionsWrapDVDCover</include>
-			<texture background="true">defaultvideo.png</texture>
+			<texture background="true" diffuse="multiplex/boxes/multiplex_mask.png">defaultvideo.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<info>ListItem.Icon</info>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
 		<control type="image">
-			<include>MultiplexIconDimensionsWrapDVDFront</include>
-			<texture>multiplex/boxes/multiplex_cfront.png</texture>
+			<include>MultiplexIconDimensionsWrapDVDCase</include>
+			<texture>multiplex/boxes/multiplex_glass.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
 		<control type="image">
-			<include>MultiplexIconDimensionsWrapReflectDVD</include>
-			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_cback.png</texture>
+			<include>MultiplexIconDimensionsWrapReflectDVDCase</include>
+			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_border.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
@@ -955,8 +813,8 @@
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>	
 		<control type="image">
-			<include>MultiplexIconDimensionsWrapReflectDVD</include>
-			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_cfront.png</texture>
+			<include>MultiplexIconDimensionsWrapReflectDVDCase</include>
+			<texture background="true" flipy="true" diffuse="multiplex/boxes/multiplex_maskreflect.png">multiplex/boxes/multiplex_glass.png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<include>Animation_MultiplexFocusZoomDVD</include>
 		</control>
